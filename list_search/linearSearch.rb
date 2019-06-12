@@ -1,10 +1,10 @@
 # 線形探索
 
-hoge = gets.strip.split.map(&:to_i)
-foo = gets.to_i
-# hoge = [10, 7, 12, 6, 1, 4, 3]
-# foo = 1
-
-for var in hoge do
-   puts hoge.index(var) if var == foo
+def linear_search(key, input)
+   for var in input do
+      puts input.index(var).succ if var == key
+   end
 end
+
+input = [10, 7, 12, 6, 1, 4, 3]
+linear_search(4, input)

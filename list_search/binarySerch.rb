@@ -5,7 +5,7 @@
 
 
 def binary_search(key, input) 
-    find_left = false
+    find_flag = false
 
     search_left = 0
     search_right = input.length() - 1
