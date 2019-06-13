@@ -16,6 +16,7 @@ step_hash = { goal => 0 }
 queue = [[goal, 0]]
 
 def swap(str, a, b)
-
-
+    tmp = str.dup
+    tmp[a], tmp[b] = tmp[b], tmp[a]
+    tmp
 end
