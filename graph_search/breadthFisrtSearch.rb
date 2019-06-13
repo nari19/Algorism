@@ -20,3 +20,17 @@ def swap(str, a, b)
     tmp[a], tmp[b] = tmp[b], tmp[a]
     tmp
 end
+
+loop fo
+    figure, step_count = queue.shift
+    break if figure.nil? || step_count.nill?
+
+    current_idx = figure.index('0')
+    MOVE_LIST [current_idx].each do |new_idx|
+        new_figure = swap(figure, current_idx, new_idx)
+        next if step_hash[new_figure]
+
+        step_hash[new_figure] = step_count + 1
+        queue << [new_figure, step_count + 1]
+    end
+end
