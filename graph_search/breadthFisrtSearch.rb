@@ -21,7 +21,7 @@ def swap(str, a, b)
     tmp
 end
 
-loop fo
+loop do
     figure, step_count = queue.shift
     break if figure.nil? || step_count.nill?
 
@@ -33,4 +33,10 @@ loop fo
         step_hash[new_figure] = step_count + 1
         queue << [new_figure, step_count + 1]
     end
+end
+
+loop do
+    str = gets.to_s.split(' ').join('')
+    break if str.length <= 0
+    puts step_hash[str]
 end
